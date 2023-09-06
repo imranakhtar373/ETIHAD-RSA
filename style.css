@@ -11,6 +11,19 @@ html,body{
     position: relative;
     overflow: hidden;
 }
+
+@font-face{
+    font-family: a;
+    src: url(fonts/jost-variable.ttf);
+}
+@font-face{
+    font-family: b;
+    src:url(fonts/font1.ttf)
+}
+@font-face{
+    font-family: c;
+    src: url(fonts/font2.ttf);
+}
 #page1{
     height: 100vh;
     width: 100vw;
@@ -34,4 +47,12 @@ html,body{
 
 #page1>nav>img{
     width: 9%;
+}
+#right-nv>button{
+    padding:10px 20px;
+    border-radius: 50px;
+    background-color: #0b48ed;
+    border: 1px solid white;
+    color: whitesmoke;
+    font-family: a;
 }
