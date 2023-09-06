@@ -60,7 +60,33 @@ html,body{
     font-family: a;
     font-size: 12px;
 }
+.bottom-page1{
+    position: absolute;
+    bottom: 5%;
+    left: 15%;
+    height: 40vh;
+    width: 50vw;
+}
 .bottom-page1>h1{
    font-family: a;
-   
+   font-size: 5vw;
+   color: white;
+   font-weight: 100;
+    line-height: 1;
+
+}
+.bottom-page2{
+    position: absolute;
+    bottom: 0%;
+    height: 30%;
+    width: 100%;
+
+}
+.bottom-page2{
+    font-family: a;
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    justify-content: space-between;
+    color: white;
 }
