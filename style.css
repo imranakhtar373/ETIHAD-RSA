@@ -17,3 +17,8 @@ html,body{
     background-color: red;
     position: relative;
 }
+#page1>video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
