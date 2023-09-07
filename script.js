@@ -50,3 +50,53 @@ gsap.to("#page2>h1>span",{
     stagger:.2,
     color:`#fff`
 })
+
+
+const canvas = document.querySelector("#page3>canvas");
+const context = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+
+window.addEventListener("resize", function () {
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+render();
+});
+
+function files(index){
+  var data =`
+
+  `;
+  return data.split("\n")[index];
+}
+
+const frameCount = 300;
+
+const images = [];
+const imageSeq = {
+  frame:1,
+};
+
+for (let i = 0; i < frameCount; i++){
+  const img = new Image();
+  img.src = files(i);
+  images.push(img);
+}
+
+gsap.to(imageSeq, {
+  frame: frameCount - 1,
+  snap: "frame",
+  ease: `none`,
+  scrollTrigger: {
+    scrub: .5,
+    trigger: `#page3`,
+    start: `top top`,
+    end: `250% top`,
+    scroller: `#main`,
+  },
+  onUpdate: render,
+});
+images[1].onload = render;
+
