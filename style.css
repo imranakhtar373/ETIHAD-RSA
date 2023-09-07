@@ -175,3 +175,14 @@ html,body{
     max-width: 100vw;
     max-height: 100vh;
 }
+#page6{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color:#0a33d5;
+}
+#page6>canvas{
+    position: relative;
+    max-width: 100vw;
+    max-height: 100vh;
+}
