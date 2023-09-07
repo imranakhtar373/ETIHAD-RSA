@@ -44,9 +44,9 @@ gsap.to("#page2>h1>span",{
         start:`top bottom`,
         end:`bottom top`,
         scroller:`#main`,
-        scrub:.9,
+        scrub:.5,
         marker:true
     },
-    stagger:.9,
+    stagger:.2,
     color:`#fff`
 })
