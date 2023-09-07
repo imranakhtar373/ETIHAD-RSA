@@ -230,3 +230,145 @@ gsap.to("#page4>h1>span",{
     stagger:.2,
     color:`#fff`
 })
+
+
+
+function canvas1(){
+  const canvas = document.querySelector("#page5>canvas");
+  const context = canvas.getContext("2d");
+  
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  
+  
+  window.addEventListener("resize", function () {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  render();
+  });
+  
+  function files(index){
+    var data =`
+          ./101.png
+          ./102.png
+          ./103.png
+          ./104.png
+          ./105.png
+          ./106.png
+          ./107.png
+          ./108.png
+          ./109.png
+          ./110.png
+          ./111.png
+          ./112.png
+          ./113.png
+          ./114.png
+          ./115.png
+          ./116.png
+          ./117.png
+          ./118.png
+          ./119.png
+          ./120.png
+          ./121.png
+          ./122.png
+          ./123.png
+          ./124.png
+          ./125.png
+          ./126.png
+          ./127.png
+          ./128.png
+          ./129.png
+          ./130.png
+          ./131.png
+          ./132.png
+          ./133.png
+          ./134.png
+          ./135.png
+          ./136.png
+          ./137.png
+          ./138.png
+          ./139.png
+          ./140.png
+          ./141.png
+          ./142.png
+          ./143.png
+          ./144.png
+          ./145.png
+          ./146.png
+          ./147.png
+          ./148.png
+          ./149.png
+          ./150.png
+          ./151.png
+          ./152.png
+          ./153.png
+          ./154.png
+          ./155.png
+    `;
+    return data.split("\n")[index];
+  }
+  
+  const frameCount = 49;
+  
+  const images = [];
+  const imageSeq = {
+    frame:1,
+  };
+  
+  for (let i = 0; i < frameCount; i++){
+    const img = new Image();
+    img.src = files(i);
+    images.push(img);
+  }
+  
+  gsap.to(imageSeq, {
+    frame: frameCount - 1,
+    snap: "frame",
+    ease: `none`,
+    scrollTrigger: {
+      scrub: .5,
+      trigger: `#page5`,
+      start: `top top`,
+      end: `250% top`,
+      scroller: `#main`,
+    },
+    onUpdate: render,
+  });
+  images[1].onload = render;
+  
+  function render() {
+    scaleImage(images[imageSeq.frame], context);
+  }
+  
+  function scaleImage(img, ctx) {
+    var canvas = ctx.canvas;
+    var hRatio = canvas.width / img.width;
+    var vRatio = canvas.height / img.height;
+    var ratio = Math.max(hRatio, vRatio);
+    var centerShift_x = (canvas.width - img.width * ratio) / 2;
+    var centerShift_y = (canvas.height - img.height * ratio) / 2;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(
+      img,
+      0,
+      0,
+      img.width,
+      img.height,
+      centerShift_x,
+      centerShift_y,
+      img.width * ratio,
+      img.height * ratio
+    );
+  }
+  
+  ScrollTrigger.create({
+  
+    trigger: "#page5",
+    pin: true,
+    scroller: `#main`,
+    start: `top top`,
+    end: `250% top`,
+  });
+  }
+  canvas1()
+  
