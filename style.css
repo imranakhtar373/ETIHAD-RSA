@@ -154,9 +154,12 @@ html,body{
 #page4>h4{
     margin-left: 10vw;
     margin-bottom: 2vw;
+    color: rgba(255, 255, 255, 0.548);
 }
 #page4>h1{
     margin-left: 10vw;
     width:70%;
     font-size: 3vw;
+    font-weight: 100;
+    color: rgba(255, 255, 255, 0.403);
 }
