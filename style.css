@@ -186,3 +186,16 @@ html,body{
     max-width: 100vw;
     max-height: 100vh;
 }
+
+.page7-clr{
+    position: absolute;
+    z-index: 9;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 30vw;
+    width: 30vw;
+    border: 1px solid white;
+    border-radius: 50%;
+
+}
