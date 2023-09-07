@@ -10,6 +10,7 @@ html,body{
 #main{
     position: relative;
     overflow: hidden;
+    background-color: #1137ca;
 }
 
 @font-face{
@@ -140,8 +141,22 @@ html,body{
     position: relative;
 }
 #page4{
-    position: absolute;
-    max-height: 100vh;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    height: 100vh;
     width: 100vw;
-    background-color: greenyellow;
+    background-color: #1137ca;
+    font-family: a;
+}
+#page4>h4{
+    margin-left: 10vw;
+    margin-bottom: 2vw;
+}
+#page4>h1{
+    margin-left: 10vw;
+    width:70%;
+    font-size: 3vw;
 }
