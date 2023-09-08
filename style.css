@@ -210,9 +210,48 @@ html,body{
     background-color:transparent;
     border: 1px solid white;
 }
-#page8{
-    
-    height: 100%;
+#page7{
+    position: relative;
+    height: 110vh;
+    width: 100vw;
+   background-color: #0b48ed;
+   font-family: a;
+}
+#page7>h1{
+    position: absolute;
+    font-size: 3vw;
+    top: 10%;
+    left: 10%;
+    color: white;
+    font-weight: 100;
+}
+
+.page7-inner{
+    position: relative;
+    margin-bottom:2vw;
+    height: 25%;
+    top:18%;
+    display: flex;
     width: 100%;
-    object-fit: cover;
+}
+
+.left7{
+    position: relative;
+    height: 120%;
+    width: 40%;
+    left: 5%;
+    
+}
+.left7>img{
+    height: 150%;
+    width: 100%;
+    left: 5%;
+    object-fit:cover;
+}
+.right7{
+    position: absolute;
+    left: 50%;
+    height: 110%;
+    width: 100%;
+    background-color: blueviolet;
 }
