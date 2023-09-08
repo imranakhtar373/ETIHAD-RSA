@@ -188,6 +188,9 @@ html,body{
 }
 
 .page7-clr{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     z-index: 9;
     top: 50%;
@@ -198,4 +201,12 @@ html,body{
     border: 1px solid white;
     border-radius: 50%;
 
+}
+
+.page7-clr-inner{
+    height: 70%;
+    width: 70%;
+    border-radius: 50%;
+    background-color:transparent;
+    border: 1px solid white;
 }
