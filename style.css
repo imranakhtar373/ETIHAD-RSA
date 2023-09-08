@@ -210,3 +210,9 @@ html,body{
     background-color:transparent;
     border: 1px solid white;
 }
+#page8{
+    
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
